@@ -1,0 +1,560 @@
+/**
+ * AI & ML Theme for VitePress
+ * A theme tailored for documentation of AI and Machine Learning projects.
+ */
+
+/**
+ * Colors: Solid - AI & ML Specific
+ * Reflecting a tech-forward, data-driven feel.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-white: #f8f9fa; /* Lighter white for a cleaner look */
+    --vp-c-black: #212529; /* Darker black for better readability */
+
+    --vp-c-neutral: var(--vp-c-black);
+    --vp-c-neutral-inverse: var(--vp-c-white);
+}
+
+.dark {
+    --vp-c-neutral: var(--vp-c-white);
+    --vp-c-neutral-inverse: var(--vp-c-black);
+}
+
+/**
+ * Colors: Palette - AI & ML Inspired
+ * Using a cooler palette for a modern, analytical feel.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-gray-1: #ced4da;
+    --vp-c-gray-2: #dee2e6;
+    --vp-c-gray-3: #e9ecef;
+    --vp-c-gray-soft: rgba(173, 181, 189, 0.14); /* Soft gray with transparency */
+
+    --vp-c-teal-1: #20c997; /* Vibrant teal for highlights */
+    --vp-c-teal-2: #38d9a9;
+    --vp-c-teal-3: #40efb8;
+    --vp-c-teal-soft: rgba(64, 239, 184, 0.14); /* Soft teal with transparency */
+
+    --vp-c-blue-1: #4dabf7; /* Calming blue for links and accents */
+    --vp-c-blue-2: #74c0fc;
+    --vp-c-blue-3: #a5d8ff;
+    --vp-c-blue-soft: rgba(165, 216, 255, 0.14); /* Soft blue with transparency */
+
+    --vp-c-purple-1: #868e96; /* Muted purple for less critical highlights */
+    --vp-c-purple-2: #a9afb7;
+    --vp-c-purple-3: #bac0c9;
+    --vp-c-purple-soft: rgba(186, 192, 201, 0.14); /* Soft purple with transparency */
+
+    --vp-c-green-1: #37b24d; /* Positive green, for success messages */
+    --vp-c-green-2: #40c057;
+    --vp-c-green-3: #5cb85c;
+    --vp-c-green-soft: rgba(92, 184, 92, 0.14); /* Soft green with transparency */
+
+    --vp-c-yellow-1: #f08c00; /* Warm yellow for warnings */
+    --vp-c-yellow-2: #faa22f;
+    --vp-c-yellow-3: #fcc419;
+    --vp-c-yellow-soft: rgba(252, 196, 25, 0.14); /* Soft yellow with transparency */
+
+    --vp-c-red-1: #fa5252; /* Alerting red for errors */
+    --vp-c-red-2: #ff6b6b;
+    --vp-c-red-3: #f03e3e;
+    --vp-c-red-soft: rgba(240, 62, 62, 0.14); /* Soft red with transparency */
+
+    --vp-c-sponsor: #e64980; /* Sponsor color, similar to original but can be adjusted */
+}
+
+.dark {
+    --vp-c-gray-1: #6c757d;
+    --vp-c-gray-2: #495057;
+    --vp-c-gray-3: #343a40;
+    --vp-c-gray-soft: rgba(108, 117, 125, 0.16); /* Darker soft gray for dark mode */
+
+    --vp-c-teal-1: #51cfbb;
+    --vp-c-teal-2: #38d9a9;
+    --vp-c-teal-3: #32b886;
+    --vp-c-teal-soft: rgba(64, 239, 184, 0.16); /* Darker soft teal for dark mode */
+
+    --vp-c-blue-1: #a5d8ff;
+    --vp-c-blue-2: #74c0fc;
+    --vp-c-blue-3: #4dabf7;
+    --vp-c-blue-soft: rgba(165, 216, 255, 0.16); /* Darker soft blue for dark mode */
+
+    --vp-c-purple-1: #868e96; /* Muted purple for less critical highlights */
+    --vp-c-purple-2: #a9afb7;
+    --vp-c-purple-3: #bac0c9;
+    --vp-c-purple-soft: rgba(186, 192, 201, 0.16); /* Soft purple with transparency */
+
+    --vp-c-green-1: #86cb8c; /* Positive green, for success messages */
+    --vp-c-green-2: #40c057;
+    --vp-c-green-3: #37b24d;
+    --vp-c-green-soft: rgba(92, 184, 92, 0.16); /* Soft green with transparency */
+
+    --vp-c-yellow-1: #fbc02d; /* Warm yellow for warnings */
+    --vp-c-yellow-2: #faa22f;
+    --vp-c-yellow-3: #f08c00;
+    --vp-c-yellow-soft: rgba(252, 196, 25, 0.16); /* Soft yellow with transparency */
+
+    --vp-c-red-1: #ff8787; /* Alerting red for errors */
+    --vp-c-red-2: #ff6b6b;
+    --vp-c-red-3: #fa5252;
+    --vp-c-red-soft: rgba(240, 62, 62, 0.16); /* Soft red with transparency */
+}
+
+/**
+ * Colors: Background - AI & ML Adapted
+ * Subtler backgrounds for less distraction.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-bg: #ffffff;
+    --vp-c-bg-alt: #f8f9fa; /* Lighter alternative background */
+    --vp-c-bg-elv: #ffffff;
+    --vp-c-bg-soft: #f8f9fa; /* Softer background */
+}
+
+.dark {
+    --vp-c-bg: #212529;
+    --vp-c-bg-alt: #343a40; /* Darker alternative background */
+    --vp-c-bg-elv: #343a40;
+    --vp-c-bg-soft: #343a40; /* Darker soft background */
+}
+
+/**
+ * Colors: Borders - AI & ML Enhanced
+ * Softer borders to keep focus on the content.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-border: #ced4da;
+    --vp-c-divider: #dee2e6;
+    --vp-c-gutter: #dee2e6;
+}
+
+.dark {
+    --vp-c-border: #495057;
+    --vp-c-divider: #495057;
+    --vp-c-gutter: #212529;
+}
+
+/**
+ * Colors: Text - AI & ML Focused
+ * Optimized text colors for readability.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-text-1: #495057;
+    --vp-c-text-2: #6c757d;
+    --vp-c-text-3: #adb5bd;
+}
+
+.dark {
+    --vp-c-text-1: #f8f9fa;
+    --vp-c-text-2: #ced4da;
+    --vp-c-text-3: #adb5bd;
+}
+
+/**
+ * Colors: Function - AI & ML Specific
+ * Adjustments to functional colors to match the theme.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-default-1: var(--vp-c-gray-1);
+    --vp-c-default-2: var(--vp-c-gray-2);
+    --vp-c-default-3: var(--vp-c-gray-3);
+    --vp-c-default-soft: var(--vp-c-gray-soft);
+
+    --vp-c-brand-1: var(--vp-c-blue-1); /* Use AI blue */
+    --vp-c-brand-2: var(--vp-c-blue-2);
+    --vp-c-brand-3: var(--vp-c-blue-3);
+    --vp-c-brand-soft: var(--vp-c-blue-soft);
+
+    /* DEPRECATED: Use `--vp-c-brand-1` instead. */
+    --vp-c-brand: var(--vp-c-brand-1);
+
+    --vp-c-tip-1: var(--vp-c-teal-1); /* Use vibrant teal */
+    --vp-c-tip-2: var(--vp-c-teal-2);
+    --vp-c-tip-3: var(--vp-c-teal-3);
+    --vp-c-tip-soft: var(--vp-c-teal-soft);
+
+    --vp-c-note-1: var(--vp-c-purple-1);
+    --vp-c-note-2: var(--vp-c-purple-2);
+    --vp-c-note-3: var(--vp-c-purple-3);
+    --vp-c-note-soft: var(--vp-c-purple-soft);
+
+    --vp-c-success-1: var(--vp-c-green-1);
+    --vp-c-success-2: var(--vp-c-green-2);
+    --vp-c-success-3: var(--vp-c-green-3);
+    --vp-c-success-soft: var(--vp-c-green-soft);
+
+    --vp-c-important-1: var(--vp-c-purple-1);
+    --vp-c-important-2: var(--vp-c-purple-2);
+    --vp-c-important-3: var(--vp-c-purple-3);
+    --vp-c-important-soft: var(--vp-c-purple-soft);
+
+    --vp-c-warning-1: var(--vp-c-yellow-1);
+    --vp-c-warning-2: var(--vp-c-yellow-2);
+    --vp-c-warning-3: var(--vp-c-yellow-3);
+    --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+    --vp-c-danger-1: var(--vp-c-red-1);
+    --vp-c-danger-2: var(--vp-c-red-2);
+    --vp-c-danger-3: var(--vp-c-red-3);
+    --vp-c-danger-soft: var(--vp-c-red-soft);
+
+    --vp-c-caution-1: var(--vp-c-red-1);
+    --vp-c-caution-2: var(--vp-c-red-2);
+    --vp-c-caution-3: var(--vp-c-red-3);
+    --vp-c-caution-soft: var(--vp-c-red-soft);
+}
+
+/**
+ * Typography - AI & ML Optimized
+ * Adjustments to font families for code and content.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-font-family-base:
+            'Roboto', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+            'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --vp-font-family-mono:
+            'JetBrains Mono', ui-monospace, 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono',
+            'Courier New', monospace;
+    font-optical-sizing: auto;
+}
+
+:root:where(:lang(zh)) {
+    --vp-font-family-base:
+            'Punctuation SC', 'Roboto', ui-sans-serif, system-ui, sans-serif,
+            'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/**
+ * Shadows - AI & ML Subtle
+ * Keeping shadows subtle and modern.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-shadow-1: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+    --vp-shadow-2: 0 4px 6px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.12);
+    --vp-shadow-3: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+    --vp-shadow-4: 0 15px 25px rgba(0, 0, 0, 0.12), 0 5px 10px rgba(0, 0, 0, 0.1);
+    --vp-shadow-5: 0 20px 30px rgba(0, 0, 0, 0.16), 0 7px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/**
+ * Z-indexes - AI & ML Unchanged
+ * Keeping the default z-index values.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-z-index-footer: 10;
+    --vp-z-index-local-nav: 20;
+    --vp-z-index-nav: 30;
+    --vp-z-index-layout-top: 40;
+    --vp-z-index-backdrop: 50;
+    --vp-z-index-sidebar: 60;
+}
+
+@media (min-width: 960px) {
+    :root {
+        --vp-z-index-sidebar: 25;
+    }
+}
+
+/**
+ * Layouts - AI & ML Standard
+ * Standard layout widths.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-layout-max-width: 1440px;
+}
+
+/**
+ * Component: Header Anchor - AI & ML Consistent
+ * Keeping header anchor as default.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-header-anchor-symbol: '#';
+}
+
+/**
+ * Component: Code - AI & ML Enhanced
+ * Refined code block styles for better readability.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-code-line-height: 1.6;
+    --vp-code-font-size: 0.9em;
+    --vp-code-color: var(--vp-c-teal-1); /* Teal for inline code */
+    --vp-code-link-color: var(--vp-c-blue-1); /* Blue for links in code */
+    --vp-code-link-hover-color: var(--vp-c-blue-2);
+    --vp-code-bg: var(--vp-c-gray-soft); /* Soft gray for inline code background */
+
+    --vp-code-block-color: var(--vp-c-text-2);
+    --vp-code-block-bg: var(--vp-c-bg-alt);
+    --vp-code-block-divider-color: var(--vp-c-gutter);
+
+    --vp-code-lang-color: var(--vp-c-text-2);
+
+    --vp-code-line-highlight-color: var(--vp-c-default-soft);
+    --vp-code-line-number-color: var(--vp-c-text-2);
+
+    --vp-code-line-diff-add-color: var(--vp-c-green-soft);
+    --vp-code-line-diff-add-symbol-color: var(--vp-c-green-1);
+
+    --vp-code-line-diff-remove-color: var(--vp-c-red-soft);
+    --vp-code-line-diff-remove-symbol-color: var(--vp-c-red-1);
+
+    --vp-code-line-warning-color: var(--vp-c-yellow-soft);
+    --vp-code-line-error-color: var(--vp-c-red-soft);
+
+    --vp-code-copy-code-border-color: var(--vp-c-divider);
+    --vp-code-copy-code-bg: var(--vp-c-bg-soft);
+    --vp-code-copy-code-hover-border-color: var(--vp-c-divider);
+    --vp-code-copy-code-hover-bg: var(--vp-c-bg);
+    --vp-code-copy-code-active-text: var(--vp-c-text-2);
+    --vp-code-copy-copied-text-content: 'Copied';
+
+    --vp-code-tab-divider: var(--vp-code-block-divider-color);
+    --vp-code-tab-text-color: var(--vp-c-text-2);
+    --vp-code-tab-bg: var(--vp-code-block-bg);
+    --vp-code-tab-hover-text-color: var(--vp-c-text-1);
+    --vp-code-tab-active-text-color: var(--vp-c-text-1);
+    --vp-code-tab-active-bar-color: var(--vp-c-brand-1);
+}
+
+:lang(es),
+:lang(pt) {
+    --vp-code-copy-copied-text-content: 'Copiado';
+}
+:lang(fa) {
+    --vp-code-copy-copied-text-content: 'کپی شد';
+}
+:lang(ko) {
+    --vp-code-copy-copied-text-content: '복사됨';
+}
+:lang(ru) {
+    --vp-code-copy-copied-text-content: 'Скопировано';
+}
+:lang(zh) {
+    --vp-code-copy-copied-text-content: '已复制';
+}
+
+/**
+ * Component: Button - AI & ML Adjusted
+ * Modified button styles to match the theme.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-button-brand-border: transparent;
+    --vp-button-brand-text: var(--vp-c-white);
+    --vp-button-brand-bg: var(--vp-c-blue-3); /* AI Blue */
+    --vp-button-brand-hover-border: transparent;
+    --vp-button-brand-hover-text: var(--vp-c-white);
+    --vp-button-brand-hover-bg: var(--vp-c-blue-2);
+    --vp-button-brand-active-border: transparent;
+    --vp-button-brand-active-text: var(--vp-c-white);
+    --vp-button-brand-active-bg: var(--vp-c-blue-1);
+
+    --vp-button-alt-border: transparent;
+    --vp-button-alt-text: var(--vp-c-text-1);
+    --vp-button-alt-bg: var(--vp-c-default-3);
+    --vp-button-alt-hover-border: transparent;
+    --vp-button-alt-hover-text: var(--vp-c-text-1);
+    --vp-button-alt-hover-bg: var(--vp-c-default-2);
+    --vp-button-alt-active-border: transparent;
+    --vp-button-alt-active-text: var(--vp-c-text-1);
+    --vp-button-alt-active-bg: var(--vp-c-default-1);
+
+    --vp-button-sponsor-border: var(--vp-c-text-2);
+    --vp-button-sponsor-text: var(--vp-c-text-2);
+    --vp-button-sponsor-bg: transparent;
+    --vp-button-sponsor-hover-border: var(--vp-c-sponsor);
+    --vp-button-sponsor-hover-text: var(--vp-c-sponsor);
+    --vp-button-sponsor-hover-bg: transparent;
+    --vp-button-sponsor-active-border: var(--vp-c-sponsor);
+    --vp-button-sponsor-active-text: var(--vp-c-sponsor);
+    --vp-button-sponsor-active-bg: transparent;
+}
+
+
+/**
+ * Component: Custom Block - AI & ML Refined
+ * Adjusted custom block styles to be more subtle.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-custom-block-font-size: 14px;
+    --vp-custom-block-code-font-size: 13px;
+
+    --vp-custom-block-info-border: transparent;
+    --vp-custom-block-info-text: var(--vp-c-text-1);
+    --vp-custom-block-info-bg: var(--vp-c-default-soft);
+    --vp-custom-block-info-code-bg: var(--vp-c-default-soft);
+
+    --vp-custom-block-note-border: transparent;
+    --vp-custom-block-note-text: var(--vp-c-text-1);
+    --vp-custom-block-note-bg: var(--vp-c-default-soft);
+    --vp-custom-block-note-code-bg: var(--vp-c-default-soft);
+
+    --vp-custom-block-tip-border: transparent;
+    --vp-custom-block-tip-text: var(--vp-c-text-1);
+    --vp-custom-block-tip-bg: var(--vp-c-tip-soft);
+    --vp-custom-block-tip-code-bg: var(--vp-c-tip-soft);
+
+    --vp-custom-block-important-border: transparent;
+    --vp-custom-block-important-text: var(--vp-c-text-1);
+    --vp-custom-block-important-bg: var(--vp-c-important-soft);
+    --vp-custom-block-important-code-bg: var(--vp-c-important-soft);
+
+    --vp-custom-block-warning-border: transparent;
+    --vp-custom-block-warning-text: var(--vp-c-text-1);
+    --vp-custom-block-warning-bg: var(--vp-c-yellow-soft);
+    --vp-custom-block-warning-code-bg: var(--vp-c-yellow-soft);
+
+    --vp-custom-block-danger-border: transparent;
+    --vp-custom-block-danger-text: var(--vp-c-text-1);
+    --vp-custom-block-danger-bg: var(--vp-c-red-soft);
+    --vp-custom-block-danger-code-bg: var(--vp-c-red-soft);
+
+    --vp-custom-block-caution-border: transparent;
+    --vp-custom-block-caution-text: var(--vp-c-text-1);
+    --vp-custom-block-caution-bg: var(--vp-c-caution-soft);
+    --vp-custom-block-caution-code-bg: var(--vp-c-caution-soft);
+
+    --vp-custom-block-details-border: var(--vp-custom-block-info-border);
+    --vp-custom-block-details-text: var(--vp-custom-block-info-text);
+    --vp-custom-block-details-bg: var(--vp-custom-block-info-bg);
+    --vp-custom-block-details-code-bg: var(--vp-custom-block-info-code-bg);
+}
+
+
+/**
+ * Component: Input - AI & ML Consistent
+ * Maintaining standard input styles.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-input-border-color: var(--vp-c-border);
+    --vp-input-bg-color: var(--vp-c-bg-alt);
+
+    --vp-input-switch-bg-color: var(--vp-c-default-soft);
+}
+
+/**
+ * Component: Nav - AI & ML Customized
+ * Custom navigation styles.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-nav-height: 64px;
+    --vp-nav-bg-color: var(--vp-c-bg);
+    --vp-nav-screen-bg-color: var(--vp-c-bg);
+    --vp-nav-logo-height: 24px;
+}
+
+.hide-nav {
+    --vp-nav-height: 0px;
+}
+
+.hide-nav .VPSidebar {
+    --vp-nav-height: 22px;
+}
+
+/**
+ * Component: Local Nav - AI & ML Customized
+ * Customized local navigation styles.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-local-nav-bg-color: var(--vp-c-bg);
+}
+
+/**
+ * Component: Sidebar - AI & ML Adjusted
+ * Adjusted sidebar styles.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-sidebar-width: 272px;
+    --vp-sidebar-bg-color: var(--vp-c-bg-alt);
+}
+
+/**
+ * Colors Backdrop - AI & ML Darkened
+ * Darkened backdrop for better contrast.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-backdrop-bg-color: rgba(0, 0, 0, 0.7);
+}
+
+/**
+ * Component: Home - AI & ML Specific
+ * Custom homepage styling.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-home-hero-name-color: var(--vp-c-blue-1); /* AI Blue */
+    --vp-home-hero-name-background: transparent;
+
+    --vp-home-hero-image-background-image: none;
+    --vp-home-hero-image-filter: none;
+}
+
+/**
+ * Component: Badge - AI & ML Adjusted
+ * Adjusted badge styles for better visual hierarchy.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-badge-info-border: transparent;
+    --vp-badge-info-text: var(--vp-c-text-2);
+    --vp-badge-info-bg: var(--vp-c-default-soft);
+
+    --vp-badge-tip-border: transparent;
+    --vp-badge-tip-text: var(--vp-c-teal-1); /* Teal for Tips */
+    --vp-badge-tip-bg: var(--vp-c-tip-soft);
+
+    --vp-badge-warning-border: transparent;
+    --vp-badge-warning-text: var(--vp-c-yellow-1); /* Yellow for Warnings */
+    --vp-badge-warning-bg: var(--vp-c-yellow-soft);
+
+    --vp-badge-danger-border: transparent;
+    --vp-badge-danger-text: var(--vp-c-red-1); /* Red for Dangers */
+    --vp-badge-danger-bg: var(--vp-c-red-soft);
+}
+
+/**
+ * Component: Carbon Ads - AI & ML Subtle
+ * More subtle carbon ads styling.
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-carbon-ads-text-color: var(--vp-c-text-1);
+    --vp-carbon-ads-poweredby-color: var(--vp-c-text-2);
+    --vp-carbon-ads-bg-color: var(--vp-c-bg-soft);
+    --vp-carbon-ads-hover-text-color: var(--vp-c-blue-1); /* AI Blue */
+    --vp-carbon-ads-hover-poweredby-color: var(--vp-c-text-1);
+}
+
+/**
+  * Component: Local Search - AI & ML Consistent
+  * Keeping local search styles consistent with the theme.
+  * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-local-search-bg: var(--vp-c-bg);
+    --vp-local-search-result-bg: var(--vp-c-bg);
+    --vp-local-search-result-border: var(--vp-c-divider);
+    --vp-local-search-result-selected-bg: var(--vp-c-bg);
+    --vp-local-search-result-selected-border: var(--vp-c-blue-1);
+    --vp-local-search-highlight-bg: var(--vp-c-blue-1);
+    --vp-local-search-highlight-text: var(--vp-c-neutral-inverse);
+}
