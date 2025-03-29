@@ -63,7 +63,7 @@ export default defineConfig({
             ]
         },
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/xuehang-org/ai-data-science'},
+            {icon: 'github', link: 'https://github.com/xuehang-org/ai-ml'},
             {icon: 'twitter', link: 'https://x.com/xuehang_org'},
         ],
         footer: {
