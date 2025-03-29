@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 立即开始
-      link: /markdown-examples
+      link: /concepts/supervised-learning
 
 
 features:
